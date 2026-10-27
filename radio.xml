@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html b:css='false' b:js='true' expr:dir='data:blog.languageDirection' expr:lang='data:blog.locale.language' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'><b:attr name='xmlns' value=''/><b:attr name='xmlns:b' value=''/><b:attr name='xmlns:expr' value=''/><b:attr name='xmlns:data' value=''/>
+  
+  &lt;head&gt;
+  
+  <title><data:blog.title.escaped/></title>
+  
+  <meta expr:charset='data:blog.encoding'/>
+  <meta content='width=device-width, initial-scale=1.0' name='viewport'/>
+  <meta content='max-image-preview:large, noarchive' name='robots'/>
+  <link expr:href='data:blog.url.canonical' rel='canonical'/>
+  
+  <b:if cond='!data:view.isError'>
+    <meta expr:content='data:blog.metaDescription ? data:blog.metaDescription.escaped : (data:view.isSingleItem ? data:post.snippet.escaped snippet { length: 147, links: false, linebreaks: false, ellipsis: false } : (data:blog.pageName ? data:blog.pageName.escaped : data:blog.title.escaped))' name='description'/>
+  </b:if>
+  
+  <link expr:href='data:blog.blogspotFaviconUrl' rel='icon'/>
+  <link expr:href='data:blog.blogspotFaviconUrl' rel='apple-touch-icon' sizes='180x180'/>
+  <link href='https://cdn.jsdelivr.net/gh/astroraw/radio-blogger@v1.0.7/manifest.json' rel='manifest'/>
+  
+  <meta content='#14171c' name='theme-color'/>
+  <meta content='#14171c' name='msapplication-navbutton-color'/>
+  <meta content='black-translucent' name='apple-mobile-web-app-status-bar-style'/>
+  
+  <meta content='summary_large_image' name='twitter:card'/>
+  <meta expr:content='data:blog.pageName ? data:blog.pageName.escaped : data:blog.title.escaped' property='og:title'/>
+  <meta expr:content='data:blog.pageName ? data:blog.pageName.escaped : data:blog.title.escaped' name='twitter:title'/>
+  <meta expr:content='data:blog.url.canonical' property='og:url'/>
+  <meta expr:content='data:blog.url.canonical' name='twitter:url'/>
+  <meta expr:content='data:blog.title.escaped' property='og:site_name'/>
+  <meta expr:content='data:view.isMultipleItems ? &quot;website&quot; : &quot;article&quot;' property='og:type'/>
+  <meta expr:content='data:blog.metaDescription ? data:blog.metaDescription.escaped : (data:view.isSingleItem ? data:post.snippet.escaped snippet { length: 147, links: false, linebreaks: false, ellipsis: false } : (data:blog.pageName ? data:blog.pageName.escaped : data:blog.title.escaped))' property='og:description'/>
+  <meta expr:content='data:blog.metaDescription ? data:blog.metaDescription.escaped : (data:view.isSingleItem ? data:post.snippet.escaped snippet { length: 147, links: false, linebreaks: false, ellipsis: false } : (data:blog.pageName ? data:blog.pageName.escaped : data:blog.title.escaped))' name='twitter:description'/>
+  
+  <b:if cond='data:blog.postImageUrl'>
+    <meta expr:content='resizeImage(data:blog.postImageUrl, 0)' property='og:image'/>
+    <meta expr:content='resizeImage(data:blog.postImageUrl, 0)' name='twitter:image:src'/>
+    <b:else/>
+    <b:with value='{url: &quot;AGREGAR_IMAGEN&quot;}' var='thumb'>
+      <meta expr:content='data:thumb.url' property='og:image'/>
+      <meta expr:content='data:thumb.url' name='twitter:image:src'/>
+    </b:with>
+  
+  </b:if>
+  
+  <link href='//cdn.jsdelivr.net' rel='dns-prefetch'/>
+  <link href='//cdnjs.cloudflare.com' rel='dns-prefetch'/>
+  
+  <link crossorigin='anonymous' href='https://cdn.jsdelivr.net' rel='preconnect'/>
+  <link crossorigin='anonymous' href='https://fonts.gstatic.com' rel='preconnect'/>
+  <link crossorigin='anonymous' href='https://fonts.googleapis.com' rel='preconnect'/>
+  <link crossorigin='anonymous' href='https://cdnjs.cloudflare.com' rel='preconnect'/>
+  <link crossorigin='anonymous' href='https://blogger.googleusercontent.com' rel='preconnect'/>
+  
+  <link as='font' crossorigin='anonymous' href='https://fonts.gstatic.com/s/googlesanstext/v25/5aUu9-KzpRiLCAt4Unrc-xIKmCU5qEp2iw.woff2' rel='preload' type='font/woff2'/>
+  
+  <script type='application/ld+json'>
+  {
+    &quot;context&quot;: &quot;https://schema.org&quot;,
+    &quot;type&quot;: &quot;WebSite&quot;,
+    &quot;url&quot;: &quot;<data:blog.homepageUrl.canonical/>&quot;,
+    &quot;name&quot;: &quot;<data:blog.title/>&quot;,
+    &quot;alternateName&quot;: &quot;<data:blog.title/>&quot;,
+    &quot;potentialAction&quot;: [
+      {
+      &quot;type&quot;: &quot;ListenAction&quot;,
+        &quot;target&quot;: &quot;<data:blog.homepageUrl.canonical/>&quot;
+      }
+    ]
+  }
+  </script>
+
+<b:skin><![CDATA[
+
+:root {
+  --bg-dark: #121417;
+  --color-bg-dark-bar: #14171c;
+  --bg-medium: #181c20;
+  --bg-light: #1d2228;
+  --text-light: #e6e6e6;
+  --text-muted: #a4aeb8;
+  --accent: #4cc9f0;
+  --border: rgba(255,255,255,0.08);
+  --hover: rgba(255,255,255,0.05);
+  --font: 'Google Sans Text', Arial, sans-serif;
+  --fs: 16px;
+  --btn: 2rem;
+  --icon: 20px;
+  --rad: 6px;
+  --pad: 12px 16px;
+  --trans: color .2s ease, background-color .2s ease, transform .15s ease;
+}
+
+@font-face {
+  font-family: 'Google Sans Text';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/googlesanstext/v25/5aUu9-KzpRiLCAt4Unrc-xIKmCU5qEp2iw.woff2) format('woff2');
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background: var(--bg-dark);
+  color: var(--text-light);
+  font: var(--fs) / 1.5 var(--font);
+}
+
+/* Contenedor principal */
+.radio-player-container {
+  width: min(90%, 640px);
+  margin: 20px auto;
+  background: var(--bg-medium);
+  border: 1px solid var(--border);
+  border-radius: var(--rad);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Barra superior */
+.radio-player {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: var(--pad);
+  background: var(--color-bg-dark-bar);
+}
+
+.station-name {
+  flex: 1;
+  min-width: 0;
+  font-size: 1.1rem;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Botones */
+.player-button {
+  all: unset;
+  cursor: pointer;
+  width: var(--btn);
+  height: var(--btn);
+  display: grid;
+  place-items: center;
+  color: var(--text-muted);
+  transition: var(--trans);
+  border-radius: 50%;
+}
+
+.player-button:hover {
+  color: var(--text-light);
+}
+
+.player-button:active {
+  transform: scale(.9);
+}
+
+.player-button svg {
+  width: var(--icon);
+  height: var(--icon);
+  fill: currentColor;
+}
+
+.pause-icon {
+  display: none;
+}
+
+.playing .play-icon {
+  display: none;
+}
+
+.playing .pause-icon {
+  display: block;
+}
+
+/* Spinner de carga */
+.loading-spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255,255,255,0.1);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  display: none;
+}
+
+.loading .loading-spinner {
+  display: block;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Lista de radios */
+.radio-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-grow: 1;
+  max-height: calc(100dvh - 102px);
+  overflow-y: auto;
+  background: var(--bg-light);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  scroll-padding: 10px;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
+}
+
+.radio-list li {
+  padding: var(--pad);
+  border-bottom: 1px solid var(--border);
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: var(--trans);
+}
+
+.radio-list li:hover {
+  background: var(--hover);
+  color: var(--text-light);
+}
+
+.radio-list li.active {
+  color: var(--text-light);
+  font-weight: 500;
+}
+
+.radio-list li:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Scrollbar */
+.radio-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.radio-list::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 3px;
+}
+
+/* Cookies */
+#cookieChoiceInfo,
+#cookieChoiceInfo * {
+  box-sizing: border-box;
+}
+
+#cookieChoiceInfo {
+  padding: 1.5rem;
+  inset: auto 0 0;
+  line-height: 1.5;
+  background-color: rgba(0,0,0,0.9);
+  animation: cookies 1s forwards;
+  transform: translateY(200%);
+}
+
+#cookieChoiceInfo .cookie-choices-inner {
+  font-size: 1rem;
+  color: #fff;
+}
+
+#cookieChoiceInfo .cookie-choices-text {
+  margin: 0;
+  display: inline;
+}
+
+#cookieChoiceInfo .cookie-choices-button {
+  text-transform: initial;
+  font-weight: 700;
+  margin: 0;
+}
+
+#cookieChoiceInfo .cookie-choices-button:hover {
+  color: #2196f3;
+}
+
+@keyframes cookies {
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* Accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+]]></b:skin>
+
+&lt;!--<head/>--&gt;&lt;/head&gt;
+  
+  <body>
+    <main>
+      <div class='radio-player-container'>
+        <div class='radio-player'>
+          <button aria-label='Reproducir o Pausar Radio' class='player-button' id='play-pause-btn'>
+            <svg class='icon play-icon' viewBox='0 0 24 24'>
+              <path d='M8 5v14l11-7z'/>
+            </svg>
+            <svg class='icon pause-icon' viewBox='0 0 24 24'>
+              <path d='M6 19h4V5H6v14zm8-14v14h4V5h-4z'/>
+            </svg>
+          </button>
+          <span aria-live='polite' class='station-name' id='current-station-name'>Selecciona una radio</span>
+          <div class='loading-spinner' id='loading-spinner'/>
+        </div>
+        <ul aria-label='Estaciones de radio disponibles' class='radio-list' id='radio-list' role='listbox'/>
+      </div>
+    </main>
+    
+    <b:section id='astroRAW' showaddelement='false'/>
+    
+    <script async='async' crossorigin='anonymous' src='https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.4/howler.min.js'/>
+    <script crossorigin='anonymous' defer='defer' src='https://cdn.jsdelivr.net/gh/astroraw/radio-blogger@v1.0.7/radio.min.js'/>
+    <script async='async' crossorigin='anonymous' src='https://cdn.jsdelivr.net/gh/astroraw/bjs@2/cookienotice.js'></script>
+
+    &lt;textarea hidden id=&#39;bjs&#39;&gt;</body>&lt;/textarea&gt;&lt;/body&gt;
+</html>

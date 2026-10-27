@@ -1,0 +1,23 @@
+{
+  "name": "Reproductor de Radio",
+  "short_name": "Astro Tuner",
+  "description": "Reproductor de radio con las principales estaciones chilenas, ligero y rápido, optimizado para Blogger.",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#14171c",
+  "theme_color": "#14171c",
+  "icons": [
+    {
+      "src": "https://cdn.jsdelivr.net/gh/astroraw/radio-blogger@v1.0.7/icon/android-maskable-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "https://cdn.jsdelivr.net/gh/astroraw/radio-blogger@v1.0.7/icon/android-maskable-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
